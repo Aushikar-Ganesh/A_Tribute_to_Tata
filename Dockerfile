@@ -7,6 +7,8 @@ RUN apk --no-cache add nginx
 # Copy static website files to nginx's default serving directory
 COPY . /usr/share/nginx/html
 
+COPY default.conf /etc/nginx/http.d/
+
 # Expose port 80 for web traffic
 EXPOSE 80
 
