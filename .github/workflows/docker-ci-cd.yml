@@ -45,7 +45,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/ratan-tata-static:latest
+            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/tata_q:latest
             docker stop ratan-tata-static || true
             docker rm ratan-tata-static || true
             docker run -d -p 80:80 --name ratan-tata-static ${{ secrets.DOCKER_HUB_USERNAME }}/ratan-tata-static:latest
